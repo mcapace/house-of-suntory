@@ -35,9 +35,6 @@
     --ring: 212 175 55;
   }
 
-  * {
-    @apply border-border;
-  }
 
   body {
     @apply bg-black text-white;
