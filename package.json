@@ -1,11 +1,29 @@
 {
-  "name": "house-of-suntory",
-  "version": "1.0.0",
-  "description": "The House of Suntory - Crafted in Japan, Defined by Authenticity",
+  "name": "house-of-suntory-enhanced",
+  "version": "2.0.0",
+  "private": true,
   "scripts": {
-    "dev": "python3 -m http.server 8000",
-    "serve": "npx serve . -p 8000"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": ["suntory", "whisky", "japanese", "yamazaki", "hakushu", "hibiki", "toki"],
-  "author": "mcapace"
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "autoprefixer": "^10.4.21",
+    "framer-motion": "^11.0.0",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "typescript": "^5"
+  }
 }

@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('/fonts/dosis-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Passion Sans';
+  src: url('/fonts/passion-sans.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --foreground: 255 255 255;
+    --background: 0 0 0;
+    --card: 255 255 255;
+    --card-foreground: 0 0 0;
+    --primary: 212 175 55;
+    --primary-foreground: 0 0 0;
+    --secondary: 139 69 19;
+    --secondary-foreground: 255 255 255;
+    --accent: 212 175 55;
+    --accent-foreground: 0 0 0;
+    --muted: 38 38 38;
+    --muted-foreground: 161 161 161;
+    --border: 38 38 38;
+    --input: 38 38 38;
+    --ring: 212 175 55;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-black text-white;
+    font-family: 'Dosis', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Passion Sans', sans-serif;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-6xl lg:text-7xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-xl border border-white/5;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #B8860B 100%);
+  }
+
+  .parallax-container {
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+  }
+
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .parallax-layer-base {
+    transform: translateZ(0);
+  }
+
+  .parallax-layer-back {
+    transform: translateZ(-1px) scale(2);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-delayed {
+    animation-delay: 150ms;
+  }
+
+  .animate-delayed-2 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delayed-3 {
+    animation-delay: 450ms;
+  }
+}
